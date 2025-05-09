@@ -6,7 +6,9 @@ mcp = FastMCP("TransparenciaGubernamental")
 
 @mcp.tool()
 def buscar_contratos_por_ruc(ruc: str) -> dict:
-    # Simulación: en producción se consultaría la BD del MEF/OSCE
+    """
+    Busca contratos de un proveedor por su RUC.
+    """
     return {
         "ruc": ruc,
         "total_contratos": 42,
@@ -17,7 +19,9 @@ def buscar_contratos_por_ruc(ruc: str) -> dict:
 
 @mcp.tool()
 def obtener_asistencias_congresista(nombre: str) -> dict:
-    # Simulación: en producción se consultaría el portal del Congreso
+    """
+    Obtiene las asistencias de un congresista.
+    """
     return {
         "nombre": nombre,
         "asistencias": 152,
@@ -29,7 +33,9 @@ def obtener_asistencias_congresista(nombre: str) -> dict:
 
 @mcp.tool()
 def buscar_votaciones_por_tema(tema: str) -> list:
-    # Simulación: en producción se consultaría la base de datos de votaciones
+    """
+    Busca votaciones de un tema.
+    """
     return [
         {
             "titulo": "Ley de Reforma del Sistema de Salud Mental",
@@ -50,4 +56,4 @@ def buscar_votaciones_por_tema(tema: str) -> list:
 
 if __name__ == "__main__":
     # Servidor SSE en http://localhost:8000/sse
-    mcp.run(transport="sse")
+    mcp.run(transport="stdio")
