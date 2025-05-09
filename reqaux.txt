@@ -1,0 +1,9 @@
+fastapi==0.115.12
+langchain==0.3.25
+langgraph==0.4.3
+langchain-mcp-adapters==0.0.11
+psycopg==3.2.7
+psycopg-pool==3.2.6
+langgraph-checkpoint-postgres==2.0.21
+langchain-openai==0.3.16
+langchain-community==0.3.23
