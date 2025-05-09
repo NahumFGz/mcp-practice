@@ -16,7 +16,7 @@ from psycopg_pool import AsyncConnectionPool
 from pydantic import BaseModel
 from typing_extensions import TypedDict
 
-from config import get_settings
+from app.config import get_settings
 
 settings = get_settings()
 
